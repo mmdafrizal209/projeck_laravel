@@ -31,8 +31,8 @@
                         <div class="row">
                             <div class="col-7">
                                 <div class="text-primary p-3">
-                                    <h5 class="text-primary">Welcome Back !</h5>
-                                    <p>Public Complaints</p>
+                                    <h5 class="text-primary">Selamat Datang !</h5>
+                                    <p>Pengaduan Masyarakat</p>
                                 </div>
                             </div>
                             <div class="col-5 align-self-end">
@@ -74,7 +74,7 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted fw-medium">Complaints</p>
+                                        <p class="text-muted fw-medium">Pengaduan</p>
                                         <h4 class="mb-0">{{$complaints}}</h4>
                                     </div>
 
@@ -92,7 +92,7 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted fw-medium">Unprocessed</p>
+                                        <p class="text-muted fw-medium">Belum Diproses</p>
                                         <h4 class="mb-0">{{$unprocessed}}</h4>
                                     </div>
 
@@ -110,7 +110,7 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted fw-medium">Process</p>
+                                        <p class="text-muted fw-medium">Proses</p>
                                         <h4 class="mb-0">{{$process}}</h4>
                                     </div>
 
@@ -128,7 +128,7 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted fw-medium">Finished</p>
+                                        <p class="text-muted fw-medium">Selesai</p>
                                         <h4 class="mb-0">{{$finished}}</h4>
                                     </div>
 
@@ -146,7 +146,7 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted fw-medium">Users</p>
+                                        <p class="text-muted fw-medium">User</p>
                                         <h4 class="mb-0">{{$users}}</h4>
                                     </div>
 
@@ -164,7 +164,7 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted fw-medium">Society</p>
+                                        <p class="text-muted fw-medium">Masyarakat</p>
                                         <h4 class="mb-0">{{$society}}</h4>
                                     </div>
 
@@ -187,7 +187,7 @@
                 <div class="card">
                     
                     <div class="card-body">
-                        <h4 class="card-title">Annual Complaint Graph</h4>
+                        <h4 class="card-title">Grafik Pengaduan</h4>
                         <div class="embed-responsive embed-responsive-16by9">
                             <canvas class="embed-responsive-item" id="myChartt"></canvas>
                           </div>
@@ -225,7 +225,7 @@ foreach ($tahun as $row) {
 
           labels: <?php echo json_encode($th)?>,
           datasets: [{
-              label: 'Total Complaint',
+              label: 'Total Pengaduan',
               data: <?php echo json_encode($complaint1)?>,
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',

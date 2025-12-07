@@ -26,8 +26,8 @@
                         <div class="row">
                             <div class="col-7">
                                 <div class="text-primary p-3">
-                                    <h5 class="text-primary">Welcome Back !</h5>
-                                    <p>Online Public Complaint Service</p>
+                                    <h5 class="text-primary">Selamat Datang !</h5>
+                                    <p>Pelayanan Pengaduan Online</p>
                                 </div>
                             </div>
                             <div class="col-5 align-self-end">
@@ -42,7 +42,7 @@
                                     <img src="{{url('avatar_society/',Session::get('photo'))}}" alt="" class="img-thumbnail rounded-circle">
                                 </div>
                                 <h5 class="font-size-15 text-truncate">{{Session::get('name')}}</h5>
-                                <p class="text-muted mb-0 text-truncate">Society</p>
+                                <p class="text-muted mb-0 text-truncate">Masyarakat</p>
                             </div>
 
                             <div class="col-sm-8">
@@ -71,7 +71,7 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted fw-medium">Complaints</p>
+                                        <p class="text-muted fw-medium">Pengaduan</p>
                                         <h4 class="mb-0">{{$count_complaint}}</h4>
                                     </div>
 

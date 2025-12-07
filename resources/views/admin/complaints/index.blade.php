@@ -1,5 +1,5 @@
 @extends('admin.layouts.main')
-@section('title','Complaints | Public Complaints')
+@section('title','Pengaduan | Public Pengaduan')
 @section('css')
 <link href="{{asset('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
 <link href="{{asset('assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
@@ -13,11 +13,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0 font-size-18">Complaints</h4>
+                    <h4 class="mb-sm-0 font-size-18">Pengaduan</h4>
 
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item active">Complaints</li>
+                            <li class="breadcrumb-item active">Pengaduan</li>
                         </ol>
                     </div>
                 </div>
@@ -44,11 +44,11 @@
                             <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Photo</th>
-                                <th>Name</th>
-                                <th>Date Complaints</th>
+                                <th>Foto</th>
+                                <th>Nama</th>
+                                <th>Tanggal Pengaduan</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th>Aksi</th>
                             </tr>
                             </thead>
 
@@ -61,11 +61,11 @@
                                     <td>{{$row->Society->name}}</td>
                                     <td>{{date('d F Y H:i:s',strtotime($row->created_at))}}</td>
                                     @if ($row->status == "0")
-                                        <td><span class="badge rounded-pill bg-danger">Unprocessed</span></td>
+                                        <td><span class="badge rounded-pill bg-danger">Belum Diproses</span></td>
                                     @elseif($row->status == 'process')
-                                        <td><span class="badge rounded-pill bg-primary">Processed</span></td>
+                                        <td><span class="badge rounded-pill bg-primary">Proses</span></td>
                                     @else 
-                                        <td><span class="badge rounded-pill bg-success">Finished</span></td>
+                                        <td><span class="badge rounded-pill bg-success">Selesai</span></td>
                                     @endif
                                     <td>
                                         <a href="{{url('admin/complaints/'.$row->id)}}" class="btn btn-danger btn-rounded waves-effect waves-light">

@@ -32,24 +32,24 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="bx bxs-user-detail"></i>
-                                    <span key="t-user">Manajemen Users</span>
+                                    <span key="t-user">Manajemen User</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{route('users.create')}}" key="t-products">Add User</a></li>
-                                    <li><a href="{{route('users.index')}}" key="t-product-detail">List Users</a></li>
+                                    <li><a href="{{route('users.create')}}" key="t-products">Tambah User</a></li>
+                                    <li><a href="{{route('users.index')}}" key="t-product-detail">Daftar User</a></li>
                                 </ul>
                             </li> --}}
                             <li>
                                 <a href="{{route('complaints.index')}}" class="waves-effect">
                                     <i class="bx bx-volume-low"></i>
-                                    <span key="t-transactions">Complaints</span>
+                                    <span key="t-transactions">Pengaduan</span>
                                 </a>
                             </li>
                             @if(Auth::user()->level_id == '1')
                             <li>
                                 <a href="{{route('society.index')}}" class="waves-effect">
                                     <i class="bx bxs-user-badge"></i>
-                                    <span key="t-transactions">Society</span>
+                                    <span key="t-transactions">Masyarakat</span>
                                 </a>
                             </li>
                             
@@ -57,17 +57,17 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="bx bxs-user-detail"></i>
-                                    <span key="t-crypto">Users Management</span>
+                                    <span key="t-crypto">Manajemen User</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{route('users.create')}}" key="t-wallet">Add New User</a></li>
-                                    <li><a href="{{route('users.index')}}" key="t-buy">List User</a></li>
+                                    <li><a href="{{route('users.create')}}" key="t-wallet">Tambah User</a></li>
+                                    <li><a href="{{route('users.index')}}" key="t-buy">Daftar User</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="{{url('admin/report/day')}}" class="waves-effect">
                                     <i class="bx bx-tone"></i>
-                                    <span key="t-transactions">Report</span>
+                                    <span key="t-transactions">Laporan</span>
                                 </a>
                             </li>
                             @endif
@@ -85,7 +85,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Design & Develop by Themesbrand
+                                    Design & Develop by Ahmad Efendi
                                 </div>
                             </div>
                         </div>

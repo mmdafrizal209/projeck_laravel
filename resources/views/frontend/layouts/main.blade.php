@@ -29,7 +29,7 @@
                                 </span>
                             </a>
 
-                            <a href="index.html" class="logo logo-light">
+                            <a href="{{url('user/home')}}" class="logo logo-light">
                                 <span class="logo-sm">
                                     <img src="{{asset('assets/images/logo-light.svg')}}" alt="" height="22">
                                 </span>
@@ -120,22 +120,22 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button"
                                     >
-                                        <i class="bx bx-customize me-2"></i><span key="t-apps">Complaints</span> <div class="arrow-down"></div>
+                                        <i class="bx bx-customize me-2"></i><span key="t-apps">Pengaduan</span> <div class="arrow-down"></div>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
-                                        <a href="{{route('complaint')}}" class="dropdown-item" key="t-calendar">List Complaints</a>
+                                        <a href="{{route('complaint')}}" class="dropdown-item" key="t-calendar">Daftar Pengaduan</a>
 
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button"
                                     >
-                                        <i class="bx bx-customize me-2"></i><span key="t-apps">Add Complaints</span> <div class="arrow-down"></div>
+                                        <i class="bx bx-customize me-2"></i><span key="t-apps">Buat Pengaduan</span> <div class="arrow-down"></div>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
-                                        <a href="{{route('add_complaint')}}" class="dropdown-item" key="t-calendar">Add Complaints</a>
+                                        <a href="{{route('add_complaint')}}" class="dropdown-item" key="t-calendar">Buat Pengaduan</a>
 
                                     </div>
                                 </li>
@@ -153,11 +153,11 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Feyto Frizky Dewangga.
+                                <script>document.write(new Date().getFullYear())</script> © Ahmad Efendi.
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Design & Develop by Feyto Frizky Dewangga
+                                    Design & Develop by Ahmad Efendi
                                 </div>
                             </div>
                         </div>

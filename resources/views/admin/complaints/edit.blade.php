@@ -1,5 +1,5 @@
 @extends('admin.layouts.main')
-@section('title','Show Complaints | Public Complaints')
+@section('title','Pengaduan | Public Complaints')
 @section('css')
 
 @endsection
@@ -10,11 +10,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0 font-size-18">Give feedback</h4>
+                    <h4 class="mb-sm-0 font-size-18">Berikan Balasan</h4>
 
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item active">Give feedback</li>
+                            <li class="breadcrumb-item active">Berikan Balasan</li>
                         </ol>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="mb-3 row">
-                                        <label for="response" class="col-md-2 col-form-label">Response</label>
+                                        <label for="response" class="col-md-2 col-form-label">Respon</label>
                                         <div class="col-md-10">
                                             <textarea class="form-control" rows="8" cols="50" name="response" id="response" placeholder="Fill in your response">{{$item->Response->response}}</textarea>
                                         </div>
@@ -49,9 +49,9 @@
                                         <div class="col-md-10">
                                             <select class="form-select select2" name="status">
                                                 <option disabled selected>--Select--</option>
-                                                <option value="0" @if($item->status == '0') selected @endif>Unprocessed</option>
-                                                <option value="process" @if($item->status == 'process') selected @endif>Process</option>
-                                                <option value="finished" @if($item->status == 'finished') selected @endif>Finished</option>
+                                                <option value="0" @if($item->status == '0') selected @endif>Belum Diproses</option>
+                                                <option value="process" @if($item->status == 'process') selected @endif>Proses</option>
+                                                <option value="finished" @if($item->status == 'finished') selected @endif>Selesai</option>
 
 
                                             </select>

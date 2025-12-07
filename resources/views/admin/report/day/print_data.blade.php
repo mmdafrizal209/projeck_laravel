@@ -21,7 +21,7 @@
                     <tr class="success"><td colspan="6" style="font-family: sans-serif;text-align: center;">
 
                         <div style="text-align: center;">
-                            <h3>Report Day </h3>
+                            <h3>Laporan Harian </h3>
                             <h3>OPCS</h3>
                         </div>
                     </td></tr>
@@ -30,7 +30,8 @@
                     <tr>
                         <th>No</th>
                         <th>NIK</th>
-                        <th>Date</th>
+                        <th>Pengaduan</th>
+                        <th>Tanggal</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -39,13 +40,14 @@
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$item->nik}}</td>
+                        <td>{{$item->contents_of_the_report}}</td>
                         <td>{{$item->date_complaint}}</td>
                         @if ($item->status == "0")
-                            <td><span class="badge rounded-pill bg-danger">Unprocessed</span></td>
+                            <td><span class="badge rounded-pill bg-danger">Belum Diproses</span></td>
                         @elseif($item->status == 'process')
-                            <td><span class="badge rounded-pill bg-primary">Processed</span></td>
+                            <td><span class="badge rounded-pill bg-primary">Proses</span></td>
                         @else 
-                            <td><span class="badge rounded-pill bg-success">Finished</span></td>
+                            <td><span class="badge rounded-pill bg-success">Selesai</span></td>
                         @endif
                     </tr>
                     @endforeach

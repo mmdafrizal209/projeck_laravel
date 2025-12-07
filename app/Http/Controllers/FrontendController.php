@@ -23,6 +23,7 @@ class FrontendController extends Controller
             'nik' => 'required|min:2|max:20',
             'name' => 'required|min:2|max:20',
             'username' => 'required',
+            'email' => 'required',
             'phone_number' => 'required',
             'address' => 'required',
             'photo' => 'required',
@@ -32,6 +33,7 @@ class FrontendController extends Controller
         $society->nik = $request->nik;
         $society->name = $request->name;
         $society->username = $request->username;
+        $society->email = $request->email;
         $society->phone_number = $request->phone_number;
         $society->address = $request->address;
 
@@ -68,6 +70,7 @@ class FrontendController extends Controller
                 Session::put('nik', $society->nik);
                 Session::put('name', $society->name);
                 Session::put('username', $society->username);
+                 Session::put('email', $society->email);
                 Session::put('photo', $society->photo);
                 Session::put('phone_number', $society->phone_number);
                 Session::put('address', $society->address);
@@ -155,5 +158,23 @@ class FrontendController extends Controller
         } else {
             return redirect('/');
         }
+    }
+
+    public function search_complaint(Request $request)
+{
+    $this->validate($request, [
+        'nik' => 'required|min:2|max:20',
+    ]);
+    
+    $nik = $request->nik;
+    $data['complaints'] = Complaint::with('society')->where('nik', $nik)->get();
+    $data['search_nik'] = $nik;
+    
+    return view('frontend.search_result', $data);
+}
+
+    public function track_complaint()
+    {
+        return view('frontend.track_complaint');
     }
 }
